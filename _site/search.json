@@ -1,0 +1,660 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "PIC 16B - 2024 Winter Blog"
+  },
+  {
+    "objectID": "posts/quarto/index.html",
+    "href": "posts/quarto/index.html",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "In this post, we’ll get set up with Quarto.\nQuarto is a static site converter, which you can use to turn plaintext documents into attractive webpages. You should have already installed Quarto and signed up for GitHub when completing the software installation (details in BruinLearn)."
+  },
+  {
+    "objectID": "posts/quarto/index.html#make-a-github-repository",
+    "href": "posts/quarto/index.html#make-a-github-repository",
+    "title": "Hello, Quarto",
+    "section": "Make a GitHub repository",
+    "text": "Make a GitHub repository\nLet’s first make a GitHub repository to host your blog.\n\nFrom your user page (https://github.com/&lt;your_user_name&gt;), click on the Repositories tab.\nClick on New button.\nCreate a new repository. Carefully choose your repository name, and make sure not to select Add a README file to create a completely empty repository."
+  },
+  {
+    "objectID": "posts/quarto/index.html#generate-blog-files-using-quarto",
+    "href": "posts/quarto/index.html#generate-blog-files-using-quarto",
+    "title": "Hello, Quarto",
+    "section": "Generate blog files using Quarto",
+    "text": "Generate blog files using Quarto\nThis should be very straightforward using the instructions at this link.\nAll you need to do is run the following code at the terminal.\nquarto create-project myblog --type website:blog\nThen once a folder appears, run this line.\nquarto preview myblog\nFeel free to replace myblog with a different name.\nquarto preview should open up a link that looks like http://localhost:6832 in your web browser. The port number probably looks different."
+  },
+  {
+    "objectID": "posts/quarto/index.html#turn-the-generated-quarto-blog-into-a-github-repository",
+    "href": "posts/quarto/index.html#turn-the-generated-quarto-blog-into-a-github-repository",
+    "title": "Hello, Quarto",
+    "section": "Turn the generated Quarto blog into a GitHub repository",
+    "text": "Turn the generated Quarto blog into a GitHub repository\nFirst, move into your blog folder.\ncd myblog\nThen, follow the steps under “…or create a new repository on the command line” part of your GitHub repository inside your blog folder.\necho \"# &lt;your-repository-name&gt;\" &gt;&gt; README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit branch -M main\ngit remote add origin https://github.com/&lt;your-user-name&gt;/&lt;your-repository-name&gt;.git\ngit push -u origin main"
+  },
+  {
+    "objectID": "posts/quarto/index.html#publish-on-github-pages",
+    "href": "posts/quarto/index.html#publish-on-github-pages",
+    "title": "Hello, Quarto",
+    "section": "Publish on GitHub Pages",
+    "text": "Publish on GitHub Pages\nNow, run this line on your terminal in the same directory.\nquarto publish\nWhen prompted, select these options.\n? Provider: › GitHub Pages\n? Authorize (Y/n) › Yes\nFinally, the terminal should print out something like this:\nSwitched to a new branch 'gh-pages'\n[gh-pages (root-commit) 386cdba] Initializing gh-pages branch\nremote:\nremote: Create a pull request for 'gh-pages' on GitHub by visiting:\nremote:      https://github.com/kose-y/test-quarto/pull/new/gh-pages\nremote:\nTo https://github.com/kose-y/test-quarto.git\n* [new branch]      HEAD -&gt; gh-pages\nYour branch is up to date with 'origin/main'.\nSwitched to branch 'main'\nFrom https://github.com/kose-y/test-quarto\n* branch            gh-pages   -&gt; FETCH_HEAD\nRendering for publish:\n\n[1/4] posts/post-with-code/index.qmd\n[2/4] posts/welcome/index.qmd\n[3/4] index.qmd\n[4/4] about.qmd\n\nbranch 'gh-pages' set up to track 'origin/gh-pages'.\nHEAD is now at 386cdba Initializing gh-pages branch\nPreparing worktree (resetting branch 'gh-pages'; was at 386cdba)\nfatal: pathspec '.' did not match any files\n[gh-pages 1c6e662] Built site for gh-pages\n29 files changed, 6535 insertions(+)\ncreate mode 100644 .nojekyll\ncreate mode 100644 about.html\ncreate mode 100644 index.html\ncreate mode 100644 listings.json\ncreate mode 100644 posts/post-with-code/image.jpg\ncreate mode 100644 posts/post-with-code/index.html\ncreate mode 100644 posts/welcome/index.html\ncreate mode 100644 posts/welcome/thumbnail.jpg\ncreate mode 100644 profile.jpg\ncreate mode 100644 search.json\ncreate mode 100644 site_libs/bootstrap/bootstrap-icons.css\ncreate mode 100644 site_libs/bootstrap/bootstrap-icons.woff\ncreate mode 100644 site_libs/bootstrap/bootstrap.min.css\ncreate mode 100644 site_libs/bootstrap/bootstrap.min.js\ncreate mode 100644 site_libs/clipboard/clipboard.min.js\ncreate mode 100644 site_libs/quarto-html/anchor.min.js\ncreate mode 100644 site_libs/quarto-html/popper.min.js\ncreate mode 100644 site_libs/quarto-html/quarto-syntax-highlighting.css\ncreate mode 100644 site_libs/quarto-html/quarto.js\ncreatorigin https://github.com/kose-y/test-quarto.git (fetch)\norigin  https://github.com/kose-y/test-quarto.git (push)\nTo https://github.com/kose-y/test-quarto.git\n386cdba..1c6e662  HEAD -&gt; gh-pages\n\n[✓] Deploying gh-pages branch to website (this may take a few minutes)\n[✓] Published to https://kose-y.github.io/test-quarto/\nGo to the website on the last line, and if you see a webpage there, congrats! Your blog is up and running. At the moment, it’s just a copy of the template, so it’s not personalized in any way."
+  },
+  {
+    "objectID": "posts/quarto/index.html#edit-a-post",
+    "href": "posts/quarto/index.html#edit-a-post",
+    "title": "Hello, Quarto",
+    "section": "Edit a post",
+    "text": "Edit a post\nPreview your blog again:\nquarto preview\nThen edit the welcome page in posts/welcome/index.qmd. Any sort of change will do.\nOnce you save the file, you’ll see that the preview page on the web browser is automatically updated.\nYou can also add a new page following instructions in this post."
+  },
+  {
+    "objectID": "posts/quarto/index.html#edit-configuration",
+    "href": "posts/quarto/index.html#edit-configuration",
+    "title": "Hello, Quarto",
+    "section": "Edit configuration",
+    "text": "Edit configuration\nThe file posts/_metadata.yml contains shared options for the posts. It is highly recommended to modify freeze: true to freeze: auto, as you are expected to modify your posts often.\n# options specified here will apply to all posts in this folder\n\n# freeze computational output\n# (see https://quarto.org/docs/projects/code-execution.html#freeze)\nfreeze: auto\n\n# Enable banner style title blocks\ntitle-block-banner: true\nPlease check this page for more information."
+  },
+  {
+    "objectID": "posts/quarto/index.html#publish-again",
+    "href": "posts/quarto/index.html#publish-again",
+    "title": "Hello, Quarto",
+    "section": "Publish again",
+    "text": "Publish again\nOnce you’ve made all these additions, publish the result again using quarto publish. In a few minutes, you should see your new post on your website."
+  },
+  {
+    "objectID": "posts/quarto/index.html#references",
+    "href": "posts/quarto/index.html#references",
+    "title": "Hello, Quarto",
+    "section": "References",
+    "text": "References\n\nOfficial documentation on how to create Quarto blogs"
+  },
+  {
+    "objectID": "posts/hw0/index.html",
+    "href": "posts/hw0/index.html",
+    "title": "Homework 0",
+    "section": "",
+    "text": "In this blog post assignment, you’ll create a short post for your new website. The primary purpose is to give you some practice working with Quarto blogging with Python code.\nMake sure to check the “Specifications” section at the bottom of this assignment for an explicit list of criteria that your blog post must meet in order to receive credit."
+  },
+  {
+    "objectID": "posts/hw0/index.html#complete-the-hello-quarto-activity",
+    "href": "posts/hw0/index.html#complete-the-hello-quarto-activity",
+    "title": "Homework 0",
+    "section": "1. Complete the Hello, Quarto activity",
+    "text": "1. Complete the Hello, Quarto activity\nYour first step should be to complete the Hello Quarto activity to help you get familiar with blogging with Quarto. If you already completed this activity in Discussion, then you can skip to the next step.\nIf you haven’t done so already, now is a good time to modify your site. Look around the site’s files and see if you can figure out how to modify the About page and the blog’s title from about.qmd and _quarto.yml.\nSee these pages for help: about page, config options.\nIf you are comfortable with css, then you can directly modify style.css and other files in the repo.\nAll this is optional, and it’s not necessary to put your real name or real photo anywhere on the site."
+  },
+  {
+    "objectID": "posts/hw0/index.html#speedbump-the-autograder",
+    "href": "posts/hw0/index.html#speedbump-the-autograder",
+    "title": "Homework 0",
+    "section": "2. Speedbump: The Autograder",
+    "text": "2. Speedbump: The Autograder\nBefore we proceed, let’s talk about the autograder. Some of the specs in the homework assignments may require you to go through an autograder. Depending on the homework, you must submit a single Python file (.py) or a compressed .zip file containing multiple code files to the “autograder” submission window. For future homework, the autograder task will be a part of the main programming task. For this one, let’s just do a simple PIC 16A-level task. Remember that for your blog post to be graded, you must first pass the autograder. I strongly encourage you to do so a few days before the deadline. You have an unlimited number of submissions to the autograder.\n\nProblem. Define make_count_dictionary in HW0.py\nIn a separate file named HW0.py (please do not use a different name), write the function make_count_dictionary that takes a list L and returns a dictionary D where:\n\nThe keys of D are the unique elements of L (i.e., each element of L appears only once).\nThe value D[i] is the number of times that i appears in list L.\n\nYour code should work for lists of strings, lists of integers, and lists containing both strings and integers.\nFor example:\n# input\nL = [\"a\", \"a\", \"b\", \"c\"]\n# output\n{\"a\" : 2, \"b\" : 1, \"c\" : 1}\nFor this homework, you don’t need to mention this task in your blog."
+  },
+  {
+    "objectID": "posts/hw0/index.html#create-a-post",
+    "href": "posts/hw0/index.html#create-a-post",
+    "title": "Homework 0",
+    "section": "3. Create a post",
+    "text": "3. Create a post\nCreate a simple blog post, using the instructions and demonstrations here. Here is the prompt for your post:\n\nWrite a tutorial explaining how to construct an interesting data visualization of the Palmer Penguins data set.\n\nYou can read the data into Python by running:\nimport pandas as pd\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\nYour visualization does not have to be complex or fancy, but it should be highly readable and appropriately labeled.\nYour post should include the image directly under the code that generates it, as demonstrated here.\nThere will be three Gradescope assignments open for submission, the first one for autograder, the second for PDF, and the third one for files. You have to submit all of them for your homework to earn homework credits.\n\nFor the autograder assignment, please follow the directions.\nFor the PDF assingment, please submit your newly-created blog page printed as PDF.\n\nThe file should show the URL to your blog.\n\nFor the files assignment, please submit any code file you wrote for your homework, not including what you have submitted for autograder. All the .py file, .ipynb file, or .qmd files all included. It should include a .py file converted from any .ipynb file. The grader should be able to reproduce your result from the code portion you submitted.\n\nIt must include index.ipynb, the Jupyter Notebook you worked on, and index.py, a Python script-converted version of it.\n\n\n\nHint\nThe easiest way to create a post like this is to solve the problem in a Jupyter Notebook or Python script first, and then transfer the results over to your blog."
+  },
+  {
+    "objectID": "posts/hw0/index.html#format",
+    "href": "posts/hw0/index.html#format",
+    "title": "Homework 0",
+    "section": "Format",
+    "text": "Format\n\nFor the PDF section, you have to submit the PDF-printed version of your Quarto blog. The file should show the URL to your published blog. Anything else will receive “In Progress” grade at best, incuding:\n\n\nJupyter notebook or JupyterLab screen printed\nHTML-converted Jupyter notebook printed\nPDF-converted Jupyter notebook or JupyterLab\nPDF generated directly from Quarto\n\n\nFor the files section, you have to submit code necessary to reproduce your results, including index.ipynb and index.py, as specified above."
+  },
+  {
+    "objectID": "posts/hw0/index.html#coding-problem",
+    "href": "posts/hw0/index.html#coding-problem",
+    "title": "Homework 0",
+    "section": "Coding Problem",
+    "text": "Coding Problem\n\nThe autograder task is complete, receiving full mark on Gradescope.\nThe plot is readable and contains axis labels, a title, and a legend if appropriate."
+  },
+  {
+    "objectID": "posts/hw0/index.html#style-and-documentation",
+    "href": "posts/hw0/index.html#style-and-documentation",
+    "title": "Homework 0",
+    "section": "Style and Documentation",
+    "text": "Style and Documentation\n\nRepeated operations should be enclosed in functions.\nFor-loops are minimized by making full use of vectorized operations for Numpy arrays and Pandas data frames.\nHelpful comments are supplied throughout the code. Docstrings are supplied for any functions and classes you define."
+  },
+  {
+    "objectID": "posts/hw0/index.html#writing",
+    "href": "posts/hw0/index.html#writing",
+    "title": "Homework 0",
+    "section": "Writing",
+    "text": "Writing\n\nThe overall post is written in engaging and unambiguous English prose. There is written explanation throughout the post, such that a PIC16A student could learn to perform the demonstrated tasks by reading the post.\nEach block of code has a clearly-explained purpose.\nThe post is organized into clearly delimited sections using markdown headers (#), making it easier for the reader to navigate."
+  },
+  {
+    "objectID": "posts/hw6/index.html",
+    "href": "posts/hw6/index.html",
+    "title": "Homework 6: Fake News Classification",
+    "section": "",
+    "text": "Rampant misinformation — often called “fake news” — is one of the defining features of contemporary democratic life. In this Blog Post, you will develop and assess a fake news classifier using Keras.\nNote: Working on this Blog Post in Google Colab is highly recommended."
+  },
+  {
+    "objectID": "posts/hw6/index.html#data-source",
+    "href": "posts/hw6/index.html#data-source",
+    "title": "Homework 6: Fake News Classification",
+    "section": "Data Source",
+    "text": "Data Source\nOur data for this assignment comes from the article\n\nAhmed H, Traore I, Saad S. (2017) “Detection of Online Fake News Using N-Gram Analysis and Machine Learning Techniques. In: Traore I., Woungang I., Awad A. (eds) Intelligent, Secure, and Dependable Systems in Distributed and Cloud Environments. ISDDC 2017. Lecture Notes in Computer Science, vol 10618. Springer, Cham (pp. 127-138).\n\nI accessed it from Kaggle. I have done a small amount of data cleaning for you already, and performed a train-test split."
+  },
+  {
+    "objectID": "posts/hw6/index.html#acquire-training-data",
+    "href": "posts/hw6/index.html#acquire-training-data",
+    "title": "Homework 6: Fake News Classification",
+    "section": "1. Acquire Training Data",
+    "text": "1. Acquire Training Data\nThe dataset hosted a training data set at the below URL. You can either read it into Python directly (via pd.read_csv()) or download it to your computer and read it from disk.\ntrain_url = \"https://github.com/PhilChodrow/PIC16b/blob/master/datasets/fake_news_train.csv?raw=true\"\nEach row of the data corresponds to an article. The title column gives the title of the article, while the text column gives the full article text. The final column, called fake, is 0 if the article is true and 1 if the article contains fake news, as determined by the authors of the paper above."
+  },
+  {
+    "objectID": "posts/hw6/index.html#make-a-dataset",
+    "href": "posts/hw6/index.html#make-a-dataset",
+    "title": "Homework 6: Fake News Classification",
+    "section": "2. Make a Dataset",
+    "text": "2. Make a Dataset\nWrite a function called make_dataset. This function should do three things:\n\nChange the text to lowercase.\nRemove stopwords from the article text and title. A stopword is a word that is usually considered to be uninformative, such as “the,” “and,” or “but.” You may find this StackOverFlow thread to be helpful.\nConstruct and return a tf.data.Dataset with two inputs and one output. The input should be of the form (title, text), and the output should consist only of the fake column. You may find it helpful to consult lecture notes or this tutorial for reference on how to construct and use Datasets with multiple inputs.\n\nCall the function make_dataset on your training dataframe to produce a tf.data.Dataset. You may wish to batch your Dataset prior to returning it, which can be done like this: my_data_set.batch(100). Batching causes your model to train on chunks of data rather than individual rows. This can sometimes reduce accuracy, but can also greatly increase the speed of training. Finding a balance is key. I found batches of 100 rows to work well.\n\nValidation Data\nAfter you’ve constructed your primary Dataset, split of 20% of it to use for validation.\n\n\nBase Rate\nRecall that the base rate refers to the accuracy of a model that always makes the same guess (for example, such a model might always say “fake news!”). Determine the base rate for this data set by examining the labels on the training set.\n\n\nTextVectorization\nHere is one option:\n#preparing a text vectorization layer for tf model\nsize_vocabulary = 2000\n\ndef standardization(input_data):\n    lowercase = tf.strings.lower(input_data)\n    no_punctuation = tf.strings.regex_replace(lowercase,\n                                  '[%s]' % re.escape(string.punctuation),'')\n    return no_punctuation \n\ntitle_vectorize_layer = TextVectorization(\n    standardize=standardization,\n    max_tokens=size_vocabulary, # only consider this many words\n    output_mode='int',\n    output_sequence_length=500) \n\ntitle_vectorize_layer.adapt(train.map(lambda x, y: x[\"title\"]))"
+  },
+  {
+    "objectID": "posts/hw6/index.html#create-models",
+    "href": "posts/hw6/index.html#create-models",
+    "title": "Homework 6: Fake News Classification",
+    "section": "3. Create Models",
+    "text": "3. Create Models\nPlease use Keras models to offer a perspective on the following question:\n\nWhen detecting fake news, is it most effective to focus on only the title of the article, the full text of the article, or both?\n\nTo address this question, create three (3) Keras models.\n\nIn the first model, you should use only the article title as an input.\nIn the second model, you should use only the article text as an input.\nIn the third model, you should use both the article title and the article text as input.\n\nTrain your models on the training data until they appear to be “fully” trained. Assess and compare their performance. Make sure to include a visualization of the training histories.\nVisualize your model. You can visualize your models with this code:\nfrom keras import utils\nutils.plot_model(model, \"output_filename.png\", \n                       show_shapes=True,\n                       show_layer_names=True)\n\nNotes\n\nFor the first two models, you don’t have to create new Datasets. Instead, just specify the inputs to the keras.Model appropriately, and Keras will automatically ignore the unused inputs in the Dataset.\nThe lecture notes and tutorials linked above are likely to be helpful as you are creating your models as well.\nYou will need to use the Functional API, rather than the Sequential API, for this modeling task.\nWhen using the Functional API, it is possible to use the same layer in multiple parts of your model; see this tutorial for examples. I recommended that you share a text vectorization layer and an embedding layer for both the article title and text inputs.\n\nNote: Do not use the shared embedding layer with separate text vectorization layers. If you do so, you will be embedding two different words on the same coordinate.\n\nYou may encounter overfitting, in which case Dropout layers can help.\n\nYou’re free to be creative when designing your models. If you’re feeling very stuck, start with some of the pipelines for processing text that we’ve seen in lecture, and iterate from there. Please include in your discussion some of the things that you tried and how you determined the models you used.\n\n\nWhat Accuracy Should You Aim For?\nYour three different models might have noticeably different performance. Your best model should be able to consistently score at least 97% validation accuracy.\nAfter comparing the performance of each model on validation data, make a recommendation regarding the question at the beginning of this section. Should algorithms use the title, the text, or both when seeking to detect fake news?"
+  },
+  {
+    "objectID": "posts/hw6/index.html#model-evaluation",
+    "href": "posts/hw6/index.html#model-evaluation",
+    "title": "Homework 6: Fake News Classification",
+    "section": "4. Model Evaluation",
+    "text": "4. Model Evaluation\nNow we’ll test your model performance on unseen test data. For this part, you can focus on your best model, and ignore the other two.\nOnce you’re satisfied with your best model’s performance on validation data, download the test data here:\ntest_url = \"https://github.com/PhilChodrow/PIC16b/blob/master/datasets/fake_news_test.csv?raw=true\"\nYou’ll need to convert this data using the make_dataset function you defined in Part §2. Then, evaluate your model on the data. If we used your model as a fake news detector, how often would we be right?"
+  },
+  {
+    "objectID": "posts/hw6/index.html#embedding-visualization",
+    "href": "posts/hw6/index.html#embedding-visualization",
+    "title": "Homework 6: Fake News Classification",
+    "section": "5. Embedding Visualization",
+    "text": "5. Embedding Visualization\nVisualize and comment on the embedding that your model learned (you did use an embedding, right?). Are you able to find any interesting patterns or associations in the words that the model found useful when distinguishing real news from fake news? You are welcome to use either 2-dimensional or 3-dimensional embedding. Comment on at least 5 words whose location in the embedding you find interpretable.\nI’d suggest that you create an embedding in a relatively large number of dimensions (say, 10) and then use PCA to reduce the dimension down to a visualizable number. This procedure was demonstrated in lecture.\n\nTip: Taking images out of Colab\nYou can download the files on Colab from the “Files” tab on the left pane. The default working directory you will see is /content, and you will be able to download the iframe_figures/ directory (if you use the iframe renderer for plotly – that directory must be in the same location as the .ipynb file for the plotly figures to show up on your blog!) and any PNG files you generated. If you don’t see them, hit the “refersh” button (the second icon under the File pane)."
+  },
+  {
+    "objectID": "posts/hw6/index.html#format",
+    "href": "posts/hw6/index.html#format",
+    "title": "Homework 6: Fake News Classification",
+    "section": "Format",
+    "text": "Format\n\nThere is no autograder for this homework. Please submit the PDF printout of your blog post to the “pdf” window and any code you wrote to the “files” window – including index.ipynb and index.py."
+  },
+  {
+    "objectID": "posts/hw6/index.html#coding-problem",
+    "href": "posts/hw6/index.html#coding-problem",
+    "title": "Homework 6: Fake News Classification",
+    "section": "Coding Problem",
+    "text": "Coding Problem\n\nKeras 3 is used.\n\n\nData Prep\n\nStopwords are removed during the construction of the data set.\nmake_dataset is implemented as a function, and used to create both the training/validation and testing data sets.\nThe constructed Dataset has multiple inputs.\n20% of the training data is split off for validation.\nThere is a comment on the base rate for the data set.\n\n\n\nModels\n\nModel 1 uses only the article title.\nModel 2 uses only the article text.\nModel 3 uses both the article title and text.\nFor model 3, embedding is consistent with the text vectorization method. i.e., if you use shared embedding layer, the preceding text vectorization layer also should be shared.\nThe training history is plotted for each of the three models, including the training and validation performance.\nThe models are visualized, with output shapes and layer names visible for each layer.\nThe most performant model is evaluated on the test data set.\nThe best model consistently obtains at least 97% accuracy on the validation set.\nThe best model’s performance on the test set is shown.\n\n\n\nEmbedding Visualization\n\nA visualization of the learned word embedding is shown.\nThe written text discusses at least 5 words whose location is interpretable within the embedding."
+  },
+  {
+    "objectID": "posts/hw6/index.html#style-and-documentation",
+    "href": "posts/hw6/index.html#style-and-documentation",
+    "title": "Homework 6: Fake News Classification",
+    "section": "Style and Documentation",
+    "text": "Style and Documentation\n\nCode throughout is written using minimal repetition and clean style.\nDocstrings are not required in this Blog Post, but please make sure to include useful comments and detailed explanations for each of your code blocks.\nAny repeated operations should be enclosed in functions, regardless of whether they are explicitly required in the instructions."
+  },
+  {
+    "objectID": "posts/hw6/index.html#writing",
+    "href": "posts/hw6/index.html#writing",
+    "title": "Homework 6: Fake News Classification",
+    "section": "Writing",
+    "text": "Writing\n\nThe blog post is written in tutorial format, in engaging and clear English. Grammar and spelling errors are acceptable within reason."
+  },
+  {
+    "objectID": "posts/hw3/index.html",
+    "href": "posts/hw3/index.html",
+    "title": "Homework 3: Web Development",
+    "section": "",
+    "text": "In this blog post, you’ll create a simple webapp using Flask and describe how you did it. The skills you’ll need are:\nYou are not required to deploy your app to the internet, although you are certainly welcome to do so if you wish."
+  },
+  {
+    "objectID": "posts/hw3/index.html#overview",
+    "href": "posts/hw3/index.html#overview",
+    "title": "Homework 3: Web Development",
+    "section": "Overview",
+    "text": "Overview\nThe app you’re going to build is a simple message bank. It should do two things:\n\nAllow the user to submit messages to the bank.\nAllow the user to view a sample of the messages currently stored in the bank.\n\nAdditionally, you should use CSS to make your app look attractive and interesting! I encourage you to get creative on this.\nYour Blog Post should contain several screencaps from the functioning of your app, as well as a discussion of the Python methods you implemented to create your app.\nYou are free to (and indeed encouraged) to build on any of the examples from class, as well as any other resources you are able to find. The mnist demo and the simple form demo are good starting points.\nThe code for your app must be hosted in a GitHub repository. I suggest you begin by creating such a repository. Commit and push each time you successfully add a new piece of functionality or resolve a bug."
+  },
+  {
+    "objectID": "posts/hw3/index.html#instructions",
+    "href": "posts/hw3/index.html#instructions",
+    "title": "Homework 3: Web Development",
+    "section": "Instructions",
+    "text": "Instructions\n\n1. Enable Submissions\nFirst, create a submit template with three user interface elements:\n\nA text box for submitting a message.\nA text box for submitting the name of the user.\nA “submit” button.\n\nYou may find it helpful to put navigation links (the top two links at the top of the screen) inside a template called base.html, then have the submit.html template extend base.html. You can find an example from our lecture. For example, the base.html from mnist demo has the navigation links and also specifies where the header and content blocks would go. Then, other templates like submit.html just has to write what would go inside header and content instead of repeating everything that’s already in the base.html template.1 Here are more examples about extends from flask and jinja.\nHere’s an example of Phil’s submission page:\n\n\n\n\n\n\n\nFigure 1: Example of the message submission interface. Yours should look different!\n\n\nNow, write two Python functions for database management in a new file app.py (you can also write them in a separate .py file and import them into app.py).\n\nget_message_db() should handle creating the database of messages.\n\nCheck whether there is a database called message_db in the g attribute of the app. If not, then connect to that database, ensuring that the connection is an attribute of g. To do this last step, write a line like do g.message_db = sqlite3.connect(\"messages_db.sqlite\")\nCheck whether a table called messages exists in message_db, and create it if not. For this purpose, the SQL command CREATE TABLE IF NOT EXISTS is helpful. Give the table an id column (integer), a handle column (text), and a message column (text).\nReturn the connection g.message_db.\nHere is a helpful starter code from a previous TA, Shruti:\n\ndef get_message_db():\n  # write some helpful comments here\n  try:\n      return g.message_db\n  except:\n      g.message_db = sqlite3.connect(\"messages_db.sqlite\")\n      cmd = '' # replace this with your SQL query\n      cursor = g.message_db.cursor()\n      cursor.execute(cmd)\n      return g.message_db\ninsert_message(request) should handle inserting a user message into the database of messages.\n\nExtract the message and the handle from request. You’ll need to ensure that your submit.html template creates these fields from user input by appropriately specifying the name of the input elements. For example:\n\n&lt;input type=\"text\" name=\"message\" id=\"message\"&gt;\nis what I used in my template to ensure that request.form[\"message\"] contained the message input by the user. You should then return the message and the handle.\n\nUsing a cursor, insert the message into the message database. Remember that you’ll need to provide an ID number, the handle, and the message itself. You’ll need to write a SQL command to perform the insertion.\n\n\nNote: when working directly with SQL commands, it is necessary to run db.commit() after inserting a row into db in order to ensure that your row insertion has been saved.\nYou should ensure that the ID number of each message is unique. One way to do this is by setting the ID number of a message equal to one plus the current number of rows in message_db.2\nDon’t forget to close the database connection within the function!\n\n\nFinally, write a function to render_template() the submit.html template. Since this page will both transmit and receive data, you should ensure that it supports both POST and GET methods, and give it appropriate behavior in each one. In the GET case, you can just render the submit.html template with no other parameters. In the POST case, you should call insert_message() (and then render the submit.html template). Maybe it would be nice to add a small note thanking the user for their submission?\n\n\n2. Viewing Random Submissions\nWrite a function called random_messages(n) which will return a collection of n random messages from the message_db, or fewer if necessary. This StackOverflow post might help. Don’t forget to close the database connection within the function!\nNext, write a new template called view.html to display the messages extracted from random_messages(). Once again, here is Phil’s example:\n\n\n\n\n\n\n\nFigure 2: Example of the message viewing interface. Yours can look different!\n\n\nI took advantage of the fact that Jinja tags support looping (so I looped over the messages), and I also used the fact that Jinja tags support indexing of objects (so if m is a tuple of user handle and message m[0] contains the handle and m[1] contains the message).\nFinally, write a function to render your view.html template. This function should first call random_messages() to grab some random messages (I chose a cap of 5), and then pass these messages as an argument to render_template().\n\n\n3. Customize Your App\nWrite some CSS in the file static/style.css to customize your app! At minimum, you should\n\nIncorporate a non-default font.\nUse color in some way.\n\nFeel free to add additional CSS (and modify your templates if necessary) in order to give your app a personal feel.\nYour app should be a lot more colorful than the screencaps in this blog post!!\n\n\n4. Blog Post\nFor your blog post, write a tutorial describing how you constructed your webpage. You should include:\n\nSeparate code blocks and explanations for each of the Python functions you used to build your app (there should be at least 5).\nA discussion of at least one of the template files you used in your app. You can copy the source code of the template file into your markdown post.\nYour blog post must include two screencaps:\n\nIn the first screencap, you should show an example of a user submitting a message. In the handle field, please use either your name or the nickname used on your PIC16B blog.\nIn the second screencap, you should show an example of a user viewing submitted messages. Show at least two messages, one of which is the message you submitted in the previous screencap. This message should show your name or nickname. Additionally, please include in your blog post a link to the GitHub repository containing the code for your app."
+  },
+  {
+    "objectID": "posts/hw3/index.html#specifications",
+    "href": "posts/hw3/index.html#specifications",
+    "title": "Homework 3: Web Development",
+    "section": "Specifications",
+    "text": "Specifications\nPlease remember that all specifications must be met in order for the blog post to earn credit.\n\nFormat\n\nThere is no autograder window for this homework.\n\n\nFor files section, please submit the zip file containing all the files in your GitHub repository.\n\nPlease select the file app.py, folders templates/ and static/, along with any other files you used, then compress them together. When you see the Code tab on your submission, app.py, templates/base.html, templates/submit.html, and static/style.css must appear.\n\nFor pdf section, the URL to your GitHub repo for this homework, as well as the URL to your blog must appear.\n\n\n\nCoding Problem\n\nEach of the required functions is implemented in a logical way.\nEach of the required functions appears to successfully achieve the required task.\nThe functions that call render_template also include the appropriate additional functions. For example, the function that renders the view.html template should also call random_messages().\nThere is a css file that changes the font and incorporates color in the interface in some way. These modifications must be visible in the supplied screencaps.\n\n\n\nStyle and Documentation\n\nHelpful comments are supplied throughout the code. Docstrings are not required in this blog post.\n\n\n\nWriting\n\nThe overall post is written in engaging and unambiguous English prose. There is written explanation throughout the post, such that a PIC16A student could learn to perform the demonstrated tasks by reading the post.\nEach block of code has a clearly-explained purpose.\nThe post is organized into clearly delimited sections using markdown headers (#), making it easier for the reader to navigate.\nThe post includes the two required screencaps demonstrating the submission and viewing pages of the app.\nThe post includes a discussion of all Python functions used to create the app. This should include, at minimum, get_message_db(), insert_message(), random_messages(), and the two functions used to render templates.\nThe post includes a discussion of at least one of the two templates.\nThe blog post includes a link to the GitHub repository containing the code for the app.\n\nImage from Vector image by VectorStock / iconsgate"
+  },
+  {
+    "objectID": "posts/hw3/index.html#footnotes",
+    "href": "posts/hw3/index.html#footnotes",
+    "title": "Homework 3: Web Development",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis should remind you of object oriented programming and inheritance from PIC16A!↩︎\nRemoved 2/4: This requirement is lifted since SQLite automatically adds a rowid column.↩︎"
+  },
+  {
+    "objectID": "posts/hw5/index.html",
+    "href": "posts/hw5/index.html",
+    "title": "Homework 5: Image Classification",
+    "section": "",
+    "text": "In this blog post, you will learn several new skills and concepts related to image classification in Keras with data fed through Tensorflow Datasets."
+  },
+  {
+    "objectID": "posts/hw5/index.html#acknowledgment",
+    "href": "posts/hw5/index.html#acknowledgment",
+    "title": "Homework 5: Image Classification",
+    "section": "Acknowledgment",
+    "text": "Acknowledgment\nMajor parts of this Blog Post assignment, including several code chunks, are based on the TensorFlow Transfer Learning Tutorial. You may find that consulting this tutorial is helpful while completing this assignment, although this shouldn’t be necessary."
+  },
+  {
+    "objectID": "posts/hw5/index.html#load-packages-and-obtain-data",
+    "href": "posts/hw5/index.html#load-packages-and-obtain-data",
+    "title": "Homework 5: Image Classification",
+    "section": "1. Load Packages and Obtain Data",
+    "text": "1. Load Packages and Obtain Data\nStart by making a code block in which you’ll hold your import statements. You can update this block as you go. For now, include\nimport os\nfrom keras import utils \nimport tensorflow_datasets as tfds\nNow, let’s access the data. We’ll use a sample data set from Kaggle that contains labeled images of cats and dogs.\nPaste and run the following code block.\ntrain_ds, validation_ds, test_ds = tfds.load(\n    \"cats_vs_dogs\",\n    # 40% for training, 10% for validation, and 10% for test (the rest unused)\n    split=[\"train[:40%]\", \"train[40%:50%]\", \"train[50%:60%]\"],\n    as_supervised=True,  # Include labels\n)\n\nprint(f\"Number of training samples: {train_ds.cardinality()}\")\nprint(f\"Number of validation samples: {validation_ds.cardinality()}\")\nprint(f\"Number of test samples: {test_ds.cardinality()}\")\nBy running this code, we have created Datasets for training, validation, and testing. You can think of a Dataset as a pipeline that feeds data to a machine learning model. We use data sets in cases in which it’s not necessarily practical to load all the data into memory.\nPaste the following code into the next block. The dataset contains images of different sizes, so we resize them to a fixed size of 150x150.\nresize_fn = keras.layers.Resizing(150, 150)\n\ntrain_ds = train_ds.map(lambda x, y: (resize_fn(x), y))\nvalidation_ds = validation_ds.map(lambda x, y: (resize_fn(x), y))\ntest_ds = test_ds.map(lambda x, y: (resize_fn(x), y))\nThe next block is technical code related to rapidly reading data. If you’re interested in learning more about this kind of thing, you can take a look here. The batch_size determines how many data points are gathered from the directory at once.\nfrom tensorflow import data as tf_data\nbatch_size = 64\n\ntrain_ds = train_ds.batch(batch_size).prefetch(tf_data.AUTOTUNE).cache()\nvalidation_ds = validation_ds.batch(batch_size).prefetch(tf_data.AUTOTUNE).cache()\ntest_ds = test_ds.batch(batch_size).prefetch(tf_data.AUTOTUNE).cache()\n\nWorking with Datasets\nYou can get a piece of a data set using the take method; e.g. train_ds.take(1) will retrieve one batch (32 images with labels) from the training data.\nLet’s briefly explore our data set. Write a function to create a two-row visualization. In the first row, show three random pictures of cats. In the second row, show three random pictures of dogs. You can see some related code in the linked tutorial above, although you’ll need to make some modifications in order to separate cats and dogs by rows. A docstring is not required.\n\n\nCheck Label Frequencies\nThe following line of code will create an iterator called labels_iterator.\nlabels_iterator= train_ds.unbatch().map(lambda image, label: label).as_numpy_iterator()\nCompute the number of images in the training data with label 0 (corresponding to \"cat\") and label 1 (corresponding to \"dog\").\nThe baseline machine learning model is the model that always guesses the most frequent label. Briefly discuss how accurate the baseline model would be in our case.\nWe’ll treat this as the benchmark for improvement. Our models should do much better than baseline in order to be considered good data science achievements!"
+  },
+  {
+    "objectID": "posts/hw5/index.html#first-model",
+    "href": "posts/hw5/index.html#first-model",
+    "title": "Homework 5: Image Classification",
+    "section": "2. First Model",
+    "text": "2. First Model\nCreate a keras.Sequential model using some of the layers we’ve discussed in class. In each model, include at least two Conv2D layers, at least two MaxPooling2D layers, at least one Flatten layer, at least one Dense layer, and at least one Dropout layer. Train your model and plot the history of the accuracy on both the training and validation sets. Give your model the name model1.\nTo train a model on a Dataset, use syntax like this:\nhistory = model1.fit(train_ds, \n                     epochs=20, \n                     validation_data=validation)\nHere and in later parts of this assignment, training for 20 epochs with the Dataset settings described above should be sufficient.\nYou don’t have to show multiple models, but please do a few experiments to try to get the best validation accuracy you can. Briefly describe a few of the things you tried. Please make sure that you are able to consistently achieve at least 55% validation accuracy in this part (i.e. just a bit better than baseline).\n\nIn bold font, describe the validation accuracy of your model during training. You don’t have to be precise. For example, “the accuracy of my model stabilized between 65% and 70% during training.”\nThen, compare that to the baseline. How much better did you do?\nOverfitting can be observed when the training accuracy is much higher than the validation accuracy. Do you observe overfitting in model1?"
+  },
+  {
+    "objectID": "posts/hw5/index.html#model-with-data-augmentation",
+    "href": "posts/hw5/index.html#model-with-data-augmentation",
+    "title": "Homework 5: Image Classification",
+    "section": "3. Model with Data Augmentation",
+    "text": "3. Model with Data Augmentation\nNow we’re going to add some data augmentation layers to your model. Data augmentation refers to the practice of including modified copies of the same image in the training set. For example, a picture of a cat is still a picture of a cat even if we flip it upside down or rotate it 90 degrees. We can include such transformed versions of the image in our training process in order to help our model learn so-called invariant features of our input images.\n\nFirst, create a keras.layers.RandomFlip() layer. Make a plot of the original image and a few copies to which RandomFlip() has been applied. Make sure to check the documentation for this function!\nNext, create a keras.layers.RandomRotation() layer. Check the docs to learn more about the arguments accepted by this layer. Then, make a plot of both the original image and a few copies to which RandomRotation() has been applied. Now, create a new keras.models.Sequential model called model2 in which the first two layers are augmentation layers. Use a RandomFlip() layer and a RandomRotation() layer. Train your model, and visualize the training history.\n\nPlease make sure that you are able to consistently achieve at least 60% validation accuracy in this part. Scores of near 70% are possible.\nNote: You might find that your model in this section performs a bit worse than the one before, even on the validation set. If so, just comment on it! That doesn’t mean there’s anything wrong with your approach. We’ll see improvements soon.\n\nIn bold font, describe the validation accuracy of your model during training.\nComment on this validation accuracy in comparison to the accuracy you were able to obtain with model1.\nComment again on overfitting. Do you observe overfitting in model2?"
+  },
+  {
+    "objectID": "posts/hw5/index.html#data-preprocessing-modified-228",
+    "href": "posts/hw5/index.html#data-preprocessing-modified-228",
+    "title": "Homework 5: Image Classification",
+    "section": "4. Data Preprocessing (MODIFIED 2/28)",
+    "text": "4. Data Preprocessing (MODIFIED 2/28)\nSometimes, it can be helpful to make simple transformations to the input data. For example, in this case, the original data has pixels with RGB values between 0 and 255, but many models will train faster with RGB values normalized between 0 and 1, or possibly between -1 and 1. These are mathematically identical situations, since we can always just scale the weights. But if we handle the scaling prior to the training process, we can spend more of our training energy handling actual signal in the data and less energy having the weights adjust to the data scale.\nThe following code will create a preprocessing layer called preprocessor which you can slot into your model pipeline.\ni = keras.Input(shape=(150, 150, 3))\n# The pixel values have the range of (0, 255), but many models will work better if rescaled to (-1, 1.)\n# outputs: `(inputs * scale) + offset`\nscale_layer = keras.layers.Rescaling(scale=1 / 127.5, offset=-1)\nx = scale_layer(i)\npreprocessor = keras.Model(inputs = i, outputs = x)\nI suggest incorporating the preprocessor layer as the very first layer, before the data augmentation layers. Call the resulting model model3.\nNow, train this model and visualize the training history. This time, please make sure that you are able to achieve at least 80% validation accuracy.\n\nIn bold font, describe the validation accuracy of your model during training.\nComment on this validation accuracy in comparison to the accuracy you were able to obtain with model1.\nComment again on overfitting. Do you observe overfitting in model3?"
+  },
+  {
+    "objectID": "posts/hw5/index.html#transfer-learning",
+    "href": "posts/hw5/index.html#transfer-learning",
+    "title": "Homework 5: Image Classification",
+    "section": "5. Transfer Learning",
+    "text": "5. Transfer Learning\nSo far, we’ve been training models for distinguishing between cats and dogs from scratch. In some cases, however, someone might already have trained a model that does a related task, and might have learned some relevant patterns. For example, folks train machine learning models for a variety of image recognition tasks. Maybe we could use a pre-existing model for our task?\nTo do this, we need to first access a pre-existing “base model”, incorporate it into a full model for our current task, and then train that model.\nPaste the following code in order to download MobileNetV3Large and configure it as a layer that can be included in your model.\nIMG_SHAPE = (150, 150, 3)\nbase_model = keras.applications.MobileNetV3Large(input_shape=IMG_SHAPE,\n                                               include_top=False,\n                                               weights='imagenet')\nbase_model.trainable = False\n\ni = keras.Input(shape=IMG_SHAPE)\nx = base_model(i, training = False)\nbase_model_layer = keras.Model(inputs = i, outputs = x)\nNow, create a model called model4 that uses MobileNetV3Large. For this, you should definitely use the following layers:\n\nThe preprocessor layer from Part §4. REMOVED 2/28: preprocessing layers are included in MobileNetV3Large.\nThe data augmentation layers from Part §3.\nThe base_model_layer constructed above.\nA Dense(2) layer at the very end to actually perform the classification.\n\nBetween 3. and 4., you might want to place a small number of additional layers, like GlobalMaxPooling2D or possibly Dropout. You don’t need a lot though! Once you’ve constructed the model, check the model.summary() to see why – there is a LOT of complexity hidden in the base_model_layer. Show the summary and comment. How many parameters do we have to train in the model?\nFinally, train your model for 20 epochs, and visualize the training history.\nThis time, please make sure that you are able to achieve at least 93% validation accuracy. That’s not a typo!\n\nIn bold font, describe the validation accuracy of your model during training.\nComment on this validation accuracy in comparison to the accuracy you were able to obtain with model1.\nComment again on overfitting. Do you observe overfitting in model4?"
+  },
+  {
+    "objectID": "posts/hw5/index.html#score-on-test-data",
+    "href": "posts/hw5/index.html#score-on-test-data",
+    "title": "Homework 5: Image Classification",
+    "section": "6. Score on Test Data",
+    "text": "6. Score on Test Data\nFeel free to mess around with various model structures and settings in order to get the best validation accuracy you can. Finally, evaluate the accuracy of your most performant model on the unseen test_ds. How’d you do?"
+  },
+  {
+    "objectID": "posts/hw5/index.html#write-your-blog-post",
+    "href": "posts/hw5/index.html#write-your-blog-post",
+    "title": "Homework 5: Image Classification",
+    "section": "7. Write Your Blog Post",
+    "text": "7. Write Your Blog Post\nTurn your work into a tutorial Blog Post on the topic of image classification and transfer learning. Make sure to include all the code, summaries, and plots that you created. You might find it useful to refer to the Keras tutorial linked above, but your entire post should be in your own original words. Feel free to link your reader to any resources that you found helpful."
+  },
+  {
+    "objectID": "posts/hw5/index.html#format",
+    "href": "posts/hw5/index.html#format",
+    "title": "Homework 5: Image Classification",
+    "section": "Format",
+    "text": "Format\n\nThere is no autograder for this homework. Please submit the PDF printout of your blog post to the “pdf” window and any code you wrote to the “files” window – including index.ipynb and index.py."
+  },
+  {
+    "objectID": "posts/hw5/index.html#coding-problem",
+    "href": "posts/hw5/index.html#coding-problem",
+    "title": "Homework 5: Image Classification",
+    "section": "Coding Problem",
+    "text": "Coding Problem\n\nThe visualization in Part 1 is implemented using a function and shows labeled images of cats in one row and labeled images of dogs in another row.\nThere are two visualizations in Part 3 showing the results of applying RandomFlip and RandomRotation to an example image.\nModels 1, 2, 3, and 4 are logically constructed and obtain the required validation accuracy in each case:\n\nModel 1 should obtain at least 55% validation accuracy.\nModel 2 should obtain at least 60% validation accuracy.\nModel 3 should obtain at least 80% validation accuracy.\nModel 4 should obtain at least 93% validation accuracy.\n\nThe training history is visualized for each of the four models, including the training and validation performance.\nThe most performant model is evaluated on the test data set."
+  },
+  {
+    "objectID": "posts/hw5/index.html#style-and-documentation",
+    "href": "posts/hw5/index.html#style-and-documentation",
+    "title": "Homework 5: Image Classification",
+    "section": "Style and Documentation",
+    "text": "Style and Documentation\n\nCode throughout is written using minimal repetition and clean style.\nDocstrings are not required in this Blog Post, but please make sure to include useful comments and detailed explanations for each of your code blocks."
+  },
+  {
+    "objectID": "posts/hw5/index.html#writing",
+    "href": "posts/hw5/index.html#writing",
+    "title": "Homework 5: Image Classification",
+    "section": "Writing",
+    "text": "Writing\n\nThe blog post is written in tutorial format, in engaging and clear English. Grammar and spelling errors are acceptable within reason."
+  },
+  {
+    "objectID": "posts/hw2/index.html",
+    "href": "posts/hw2/index.html",
+    "title": "Homework 2: Web Scraping",
+    "section": "",
+    "text": "What’s your favorite movie? Wouldn’t it be nice to find more shows that you might like to watch, based on ones you know you like? Tools that address questions like this are often called “recommender systems.” Powerful, scalable recommender systems are behind many modern entertainment and streaming services, such as Netflix and Spotify. While most recommender systems these days involve machine learning, there are also ways to make recommendations that don’t require such complex tools.\nIn this Blog Post, you’ll use webscraping to answer the following question:\nThe idea of this question is that, if TV show Y has many of the same actors as TV show X, and you like X, you might also enjoy Y.\nThis post has two parts. In the first, larger part, you’ll write a webscraper for finding shared actors on TMDB. In the second, smaller part, you’ll use the results from your scraper to make recommendations.\nDon’t forget to check the Specifications for a complete list of what you need to do to obtain full credit. As usual, this Blog Post should be printed as PDF from your PIC16B Blog preview screen, and you need to submit any code you wrote as well."
+  },
+  {
+    "objectID": "posts/hw2/index.html#setup",
+    "href": "posts/hw2/index.html#setup",
+    "title": "Homework 2: Web Scraping",
+    "section": "1. Setup",
+    "text": "1. Setup\n\n1.1. Locate the Starting TMDB Page\nPick your favorite movie, and locate its TMDB page by searching on https://www.themoviedb.org/. For example, my favorite movie is Harry Potter and the Sorcerer’sPhilosopher’s Stone. Its TMDB page is at:\nhttps://www.themoviedb.org/movie/671-harry-potter-and-the-philosopher-s-stone/\nSave this URL for a moment.\n\n\n1.2. Dry-Run Navigation\nNow, we’re just going to practice clicking through the navigation steps that our scraper will take.\nFirst, click on the Full Cast & Crew link. This will take you to a page with URL of the form\n&lt;original_url&gt;cast/\nNext, scroll until you see the Cast section. Click on the portrait of one of the actors. This will take you to a page with a different-looking URL. For example, the URL for Alan Rickman, who played Severus Snape, is\nhttps://www.themoviedb.org/person/4566-alan-rickman\nFinally, scroll down until you see the actor’s Acting section. Note the titles of a few movies and TV shows in this section.\nOur scraper is going to replicate this process. Starting with your favorite movie, it’s going to look at all the actors in that movie, and then log all the other movies or TV shows that they worked on.\nAt this point, it would be a good idea for you to use the Developer Tools on your browser to inspect individual HTML elements and look for patterns among the names you are looking for.\n\n\n1.3. Initialize Your Project\n\nOpen a terminal and type:\n\nconda activate PIC16B-24W\nscrapy startproject TMDB_scraper\ncd TMDB_scraper\nThis will create quite a lot of files, but you don’t really need to touch most of them. However, you must submit the entire TMDB_scraper folder for the autograder part.\n\n\n1.4. Tweak Settings\nFor now, add the following line to the file settings.py:\nCLOSESPIDER_PAGECOUNT = 20\nThis line just prevents your scraper from downloading too much data while you’re still testing things out. You’ll remove this line later.\nHint: Later on, you may run into 403 Forbidden errors once the website detects that you’re a bot. See these links (link1, link2, link3, link4) for how to work around that issue. The easiest solution is changing one line in setting.py. You might see this when you run scrapy shell as well, so keep an eye out for 403! Remember, you want your status to be 200 OK. If they know that you are on Python, they will certainly try to block you. One way to change user agent on scrapy shell is:\nscrapy shell -s USER_AGENT='Scrapy/2.8.0 (+https://scrapy.org)' https://www.themoviedb.org/...\n(this user agent is the default one that might be blocked by TMDB.)"
+  },
+  {
+    "objectID": "posts/hw2/index.html#write-your-scraper",
+    "href": "posts/hw2/index.html#write-your-scraper",
+    "title": "Homework 2: Web Scraping",
+    "section": "2. Write Your Scraper",
+    "text": "2. Write Your Scraper\nCreate a file inside the spiders directory called tmdb_spider.py. Add the following lines to the file:\n# to run \n# scrapy crawl tmdb_spider -o movies.csv -a subdir=671-harry-potter-and-the-philosopher-s-stone\n\nimport scrapy\n\nclass TmdbSpider(scrapy.Spider):\n    name = 'tmdb_spider'\n    def __init__(self, subdir=None, *args, **kwargs):\n        self.start_urls = [f\"https://www.themoviedb.org/movie/{subdir}/\"]\nThen, you will be able to run your completed spider for a movie of your choice by giving its subdirectory on TMDB website as an extra command-line argument.\nNow, implement three parsing methods for the TmdbSpider class.\n\nparse(self, response) should assume that you start on a movie page, and then navigate to the Full Cast & Crew page. Remember that this page has url &lt;movie_url&gt;cast. (You are allowed to hardcode that part.) Once there, the parse_full_credits(self,response) should be called, by specifying this method in the callback argument to a yielded scrapy.Request. The parse() method does not return any data. This method should be no more than 5 lines of code, excluding comments and docstrings.\nparse_full_credits(self, response) should assume that you start on the Full Cast & Crew page. Its purpose is to yield a scrapy.Request for the page of each actor listed on the page. Crew members are not included. The yielded request should specify the method parse_actor_page(self, response) should be called when the actor’s page is reached. The parse_full_credits() method does not return any data. This method should be no more than 5 lines of code, excluding comments and docstrings.\nparse_actor_page(self, response) should assume that you start on the page of an actor. It should yield a dictionary with two key-value pairs, of the form {\"actor\" : actor_name, \"movie_or_TV_name\" : movie_or_TV_name}. The method should yield one such dictionary for each of the movies or TV shows on which that actor has worked in an “Acting” role1. Note that you will need to determine both the name of the actor and the name of each movie or TV show. This method should be no more than 15 lines of code, excluding comments and docstrings.\n\nProvided that these methods are correctly implemented, you can run the command\nscrapy crawl tmdb_spider -o results.csv -a subdir=671-harry-potter-and-the-philosopher-s-stone\nto create a .csv file with a column for actors and a column for movies or TV shows for Harry Potter and the Philosopher’s Stone.\nExperimentation in the scrapy shell is strongly recommended.\n\nChallenge\nIf you’re looking for a challenge, think about ways that may make your recommendations more accurate. Consider scraping the number of episodes as well or limiting the number of actors you get per show to make sure you only get the main series cast."
+  },
+  {
+    "objectID": "posts/hw2/index.html#make-your-recommendations",
+    "href": "posts/hw2/index.html#make-your-recommendations",
+    "title": "Homework 2: Web Scraping",
+    "section": "3. Make Your Recommendations",
+    "text": "3. Make Your Recommendations\nOnce your spider is fully written, comment out the line\nCLOSESPIDER_PAGECOUNT = 20\nin the settings.py file. Then, the command\nscrapy crawl tmdb_spider -o results.csv -a subdir=671-harry-potter-and-the-philosopher-s-stone\nwill run your spider and save a CSV file called results.csv, with columns for actor names and the movies and TV shows on which they featured in.\nOnce you’re happy with the operation of your spider, compute a sorted list with the top movies and TV shows that share actors with your favorite movie or TV show. For example, it may have two columns: one for “movie names” and “number of shared actors”.\nFeel free to be creative. You can show a pandas data frame, a chart using matplotlib or plotly, or any other sensible display of the results."
+  },
+  {
+    "objectID": "posts/hw2/index.html#blog-post",
+    "href": "posts/hw2/index.html#blog-post",
+    "title": "Homework 2: Web Scraping",
+    "section": "4. Blog Post",
+    "text": "4. Blog Post\nIn your blog post, you should describe how your scraper works, as well as the results of your analysis. When describing your scraper, I recommend dividing it up into the three distinct parsing methods, and discussing them one-by-one. For example:\n\nIn this blog post, I’m going to make a super cool web scraper… Here’s how we set up the project…\n&lt;implementation of parse()&gt;\nThis method works by…\n\n\n&lt;implementation of parse_full_credits()&gt;\nTo write this method, I…\n\nIn addition to describing your scraper, your Blog Post should include a table or visualization of numbers of shared actors.\nRemember that this post is still a tutorial, in which you guide your reader through the process of setting up and running the scraper. Don’t forget to tell them how to create the project and run the scraper!"
+  },
+  {
+    "objectID": "posts/hw2/index.html#submission",
+    "href": "posts/hw2/index.html#submission",
+    "title": "Homework 2: Web Scraping",
+    "section": "Submission",
+    "text": "Submission\nThere will be three Gradescope assignments open for submission, one for autograder, one for PDF, and the other for files. You have to submit all of them for your homework to be graded.\n\nFor autograder, please submit the entire TMDB_scraper/ folder compressed in .zip format. Please compress the outermost one conatining the scrapy.cfg file:\n└── TMDB_scraper   &lt;-- DIRECTLY COMPRESS THIS FOLDER.\n    ├── TMDB_scraper\n    │   ├── ...\n    │   └── spiders\n    │       ├── ...\n    │       └── tmdb_spider.py\n    ├── ...\n    └── scrapy.cfg\n\nFor the PDF assingment, please submit your newly-created blog page printed as PDF, with the URL visible. Please make sure your code is visible in full, i.e., not cuttoff, in your pdf.\nFor the files assignment, please submit any code file you wrote for your homework, except for your scrapy project. All the .py file, .ipynb file, or .qmd files all included. It should include a .py file converted from any .ipynb file. The grader should be able to reproduce your result from the code portion you submitted.\n\nIt must include index.ipynb, the Jupyter Notebook you worked on, and index.py, a Python script-converted version of it."
+  },
+  {
+    "objectID": "posts/hw2/index.html#format",
+    "href": "posts/hw2/index.html#format",
+    "title": "Homework 2: Web Scraping",
+    "section": "Format",
+    "text": "Format\n\nPlease follow the “Submission” section above."
+  },
+  {
+    "objectID": "posts/hw2/index.html#coding-problem",
+    "href": "posts/hw2/index.html#coding-problem",
+    "title": "Homework 2: Web Scraping",
+    "section": "Coding Problem",
+    "text": "Coding Problem\n\nEach of the three parsing methods are correctly implemented. (autograded)\nparse() is implemented in no more than 5 lines.\nparse_full_credits() is implemented in no more than 5 lines.\nparse_actor_page() is implemented in no more than 15 lines.\nA table or list of results or pandas dataframe is shown.\nA visualization with matplotlib, plotly, or seaborn is shown."
+  },
+  {
+    "objectID": "posts/hw2/index.html#style-and-documentation",
+    "href": "posts/hw2/index.html#style-and-documentation",
+    "title": "Homework 2: Web Scraping",
+    "section": "Style and Documentation",
+    "text": "Style and Documentation\n\nEach of the three parse methods has a short docstring describing its assumptions (e.g. what kind of page it is meant to parse) and its effect, including navigation and data outputs.\nEach of the three parse methods has helpful comments for understanding how each chunk of code operates."
+  },
+  {
+    "objectID": "posts/hw2/index.html#writing",
+    "href": "posts/hw2/index.html#writing",
+    "title": "Homework 2: Web Scraping",
+    "section": "Writing",
+    "text": "Writing\n\nThe blog post is written in tutorial format, in engaging and clear English. Grammar and spelling errors are acceptable within reason.\nThe blog post explains clearly how to set up the project, run the scraper, and access the results.\nThe blog post explains how each of the three parse methods works.\nBlog post has a descriptive title."
+  },
+  {
+    "objectID": "posts/hw2/index.html#footnotes",
+    "href": "posts/hw2/index.html#footnotes",
+    "title": "Homework 2: Web Scraping",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n[added 2/4 for clarification] Only the works listed in “Acting” section of the actor page.↩︎"
+  },
+  {
+    "objectID": "posts/hw4/index.html",
+    "href": "posts/hw4/index.html",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "",
+    "text": "In this blog assignment, you will conduct a simulation of two-dimensional heat diffusion in various ways.\nIn the lecture notes, we represented the steps to simulate one-dimensional heat diffusion as a sequence of matrix-vector multiplications. Let’s expand it to two dimensions.\nIn two-dimensions, the heat equation reads: \\[\\frac{\\partial f(x, t)}{\\partial t} = \\frac{\\partial^2 f}{\\partial x^2 } + \\frac{\\partial^2 f}{\\partial y^2 }\\;.\\] Using a similar discretization scheme as in the one-dimensional case, let’s put: \\[\nx_i = i \\Delta x,\\;\\; y_j = j \\Delta y,\\;\\; t_k = k \\Delta t,\n\\] for \\(i = 0, \\cdots, N-1\\); \\(j = 0, \\cdots, N-1\\); and \\(k = 0, 1, 2 \\cdots\\).\nWhen we define \\(u_{i, j}^k = f(x_i, y_j, t_k)\\), the update equation in discrete time can be represented as: \\[\nu_{i, j}^{k+1} \\approx u_{i, j}^k + \\epsilon \\left(u_{i+1, j}^k  + u_{i-1, j}^k + u_{i, j+1}^k + u_{i, j-1}^k - 4 u_{i, j}^k\\right),\n\\] where \\(\\epsilon\\) is a small parameter. The boundary condition can be constructed to allow heat to escape, as follows: \\[\nu_{-1, j}^k = u_{N, j}^k = u_{i, -1}^k = u_{i, N}^k = 0.\n\\] We are not explicitly allocating space for \\(u_{-1, j}^k\\), \\(u_{N, j}^k\\), \\(u_{i, -1}^k\\), or \\(u_{i, N}^k\\). (Note: the index -1 here does not mean the last index as in Python indexing; it just means \\(x = - \\Delta x\\) or \\(y = - \\Delta y\\).)\nFor this homework, we will use:\nN = 101\nepsilon = 0.2\nand we will use a similar initial condition as in the 1D case: putting 1 unit of heat at the midpoint.\nimport numpy as np\nfrom matplotlib import pyplot as plt\n# construct initial condition: 1 unit of heat at midpoint. \nu0 = np.zeros((N, N))\nu0[int(N/2), int(N/2)] = 1.0\nplt.imshow(u0)\n\n&lt;matplotlib.image.AxesImage at 0x1399ddbd0&gt;"
+  },
+  {
+    "objectID": "posts/hw4/index.html#with-matrix-multiplication",
+    "href": "posts/hw4/index.html#with-matrix-multiplication",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "1. With matrix multiplication",
+    "text": "1. With matrix multiplication\nAs in the linear algebra lecture, let’s use matrix-vector multiplication to simulate the heat diffusion in the 2D space. The vector here is created by flattening the current solution \\(u_{i, j}^k\\). Each iteration of the update is given by: (EDITED 2/20)\ndef advance_time_matvecmul(A, u, epsilon):\n    \"\"\"Advances the simulation by one timestep, via matrix-vector multiplication\n    Args:\n        A: The 2d finite difference matrix, N^2 x N^2. \n        u: N x N grid state at timestep k.\n        epsilon: stability constant.\n\n    Returns:\n        N x N Grid state at timestep k+1.\n    \"\"\"\n    N = u.shape[0]\n    u = u + epsilon * (A @ u.flatten()).reshape((N, N))\n    return u\nThat is, we view \\(u_{i, j}^k\\) as the element with index \\(N \\times i + j\\) in a vector of length \\(N^2\\). Put this function in the file heat_equation.py. Let’s follow the indexing used in the update equation above. The matrix A has the size of \\(N^2 \\times N^2\\), without all-zero rows or all-zero columns. The corresponding matrix A is given by:\nn = N * N\ndiagonals = [-4 * np.ones(n), np.ones(n-1), np.ones(n-1), np.ones(n-N), np.ones(n-N)]\ndiagonals[1][(N-1)::N] = 0\ndiagonals[2][(N-1)::N] = 0\nA = np.diag(diagonals[0]) + np.diag(diagonals[1], 1) + np.diag(diagonals[2], -1) + np.diag(diagonals[3], N) + np.diag(diagonals[4], -N)\nDefine a function get_A(N), that takes the value N as the argument and returns the corresponding matrix A in heat_equation.py.\nLet’s run the simulation with get_A() and advance_time_matvecmul() we defined. Run the code for 2700 iterations. How long does it take? Visualize the diffusion of heat every 300 iterations. Since our grading is PDF-based, please use a 3x3 grid of 2D heatmaps or contour plots. You are welcome to create an animation later. Since we want to compare computation time between multiple methods, we should not count the time needed for visualization. Thus, we need to store the intermediate solutions in a separate array."
+  },
+  {
+    "objectID": "posts/hw4/index.html#sparse-matrix-in-jax",
+    "href": "posts/hw4/index.html#sparse-matrix-in-jax",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "2. Sparse matrix in JAX",
+    "text": "2. Sparse matrix in JAX\nIn fact, the performance of Part 1 is supposed to be excruciatingly slow. While we can use the underlying optimized matrix multiplication routine from BLAS (basic linear algebra subprograms), it is not particularly effective here, as the matrix A has less than \\(5N^2\\) nonzero elements out of \\(N^4\\) elements. Most of operations are wasted for computing zeros. Let’s use the data structure that exploits a lot of zeros in the matrix A: sparse matrix data structures. The JAX package holds an experimental sparse matrix support. We can use the batched coordinate (BCOO) format to only use \\(O(N^2)\\) space for the matrix, and only take \\(O(N^2)\\) time for each update.1\nLet’s define the function get_sparse_A(N), a function that returns A_sp_matrix, the matrix A in a sparse format, given N in heat_equation.py. Repeat Part 1 using get_A_sparse() and the jit-ed version of advance_time_matvecmul.\nRun the code for 2700 iterations. How long does it take? Visualize the diffusion of heat every 300 iterations."
+  },
+  {
+    "objectID": "posts/hw4/index.html#direct-operation-with-numpy",
+    "href": "posts/hw4/index.html#direct-operation-with-numpy",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "3. Direct operation with numpy",
+    "text": "3. Direct operation with numpy\nThe matrix-vector multiplication approach is useful, particularly in other PDE problems like Poisson equations, where the matrix equation has to be solved. However, with the heat equation, it is not something absolutely necessary in terms of computation. It could be simpler with vectorized array operations like np.roll(). Write a function advance_time_numpy(u, epsilon) that advances the solution by one timestep in the file heat_equation.py. You may pad zeroes to the input array to form an \\((N + 2) \\times (N + 2)\\) array internally, but the argument and the returned solution should still be \\(N \\times N\\).\nRun the code for 2700 iterations. How long does it take? Visualize the diffusion of heat every 300 iterations."
+  },
+  {
+    "objectID": "posts/hw4/index.html#with-jax",
+    "href": "posts/hw4/index.html#with-jax",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "4. With jax",
+    "text": "4. With jax\nNow, let’s use jax to do the similar using just-in-time compilation, defining a function advance_time_jax(u, epsilon) in heat_equation.py – without using (sparse) matrix multiplication routines. It will be simple to use the function advance_time_numpy() as the starting point. Don’t forget to jit! Keep in mind that jax does not support index assignment.\nRun the code for 2700 iterations. How long does it take? It is a good idea to first run it for a small number of iterations to get it compiled, and then run it again with the full 2700 iterations to get high performance with precompiled code. It is possible to make it faster than Part 3, excluding the compilation time. Visualize the diffusion of heat every 300 iterations."
+  },
+  {
+    "objectID": "posts/hw4/index.html#comparison",
+    "href": "posts/hw4/index.html#comparison",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "5. Comparison",
+    "text": "5. Comparison\nCompare the implementation and performances of the four methods. Which one is the fastest? Which one was easier for you to write?"
+  },
+  {
+    "objectID": "posts/hw4/index.html#format",
+    "href": "posts/hw4/index.html#format",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "Format",
+    "text": "Format\n\nAs always, please submit the PDF printout of your blog post with URL visible to the “pdf” window, and any code you wrote (other than the heat_equation module) to the files window, including the files index.ipynb and index.py. Please submit the file heat_equation.py to the autograder."
+  },
+  {
+    "objectID": "posts/hw4/index.html#coding-problem",
+    "href": "posts/hw4/index.html#coding-problem",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "Coding Problem",
+    "text": "Coding Problem\n\nThe functions work correctly – checked by autograder.\nThe contents of all the functions are displayed in the blog post with inspect.getsource().\n\n\nPart 1\n\nThe visualized solution appears correct – the solution should be symmetric, invariant under a 90-degree rotation.\nThe time elapsed is shown, excluding time used for visualization.\n\n\n\nPart 2-4\n\nThe function is implemented as required.\nThe time elapsed is shown, excluding time used for visualization.\nPart 2 should be at least 10x faster than Part 1.\nPart 3 should be at least 100x faster than Part 1.\nPart 4 should be about twice as fast as Part 3.\nThe visualized solution appears correct.\n\n\n\nPart 5\n\nThe four implementations and their performances are compared."
+  },
+  {
+    "objectID": "posts/hw4/index.html#style-and-documentation",
+    "href": "posts/hw4/index.html#style-and-documentation",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "Style and Documentation",
+    "text": "Style and Documentation\n\nCode throughout is written using minimal repetition and clean style.\nDocstrings are helpful.\nPlease make sure to include useful comments and detailed explanations for each of your code blocks.\nAny repeated operations should be enclosed in functions."
+  },
+  {
+    "objectID": "posts/hw4/index.html#writing",
+    "href": "posts/hw4/index.html#writing",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "Writing",
+    "text": "Writing\n\nThe blog post is written in tutorial format, in engaging and clear English. Grammar and spelling errors are acceptable within reason."
+  },
+  {
+    "objectID": "posts/hw4/index.html#footnotes",
+    "href": "posts/hw4/index.html#footnotes",
+    "title": "Homework 4: Heat Diffusion",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThere are several sparse matrix representations for more general sparsity patterns, including CSR (Compressed Sparse Row), CSC (Compressed Sparse Column), COO (COOrdinate format), etc. They are available in scipy.↩︎"
+  },
+  {
+    "objectID": "posts/installation/index.html",
+    "href": "posts/installation/index.html",
+    "title": "Software Installation",
+    "section": "",
+    "text": "The purpose of this page is to get you set up with the software tools we’ll use in PIC 16B, including Anaconda, git + GitHub, and Quarto."
+  },
+  {
+    "objectID": "posts/installation/index.html#install-and-configure-anaconda",
+    "href": "posts/installation/index.html#install-and-configure-anaconda",
+    "title": "Software Installation",
+    "section": "1. Install and Configure Anaconda",
+    "text": "1. Install and Configure Anaconda\nAn important part of PIC16B is navigating the Python package ecosystem.\n https://xkcd.com/1987/\nWe will do so using the Anaconda distribution of Python. Getting set up with Anaconda is a somewhat detailed process, outlined below.\nYou should follow these instructions even if you already have Anaconda installed. Uninstalling and reinstalling is recommended.\n\na. Install Anaconda\nYou can find installers for Anaconda here. Choose the one appropriate to your operating system.\nIf installing on macOS, do not install Anaconda in the root-level opt directory. It is recommended that you install in the folder directly under your username. This is the same folder in which your “Downloads” folder exists. In some cases, Anaconda may suggest installing in a folder called opt under your username; this is fine.\n\n\n\nA screencap of the Anaconda graphical installer. The prompt states ‘You have chosen to install this software in the folder philchodrow on the disk Macintosh HD’\n\n\nExample of installing Anaconda to the directory corresponding to your username.\n\n\nb. Create the PIC16B-24W Anaconda Environment\nWe will create PIC16B-24W anaconda environment with specific package versions. They are listed in a .yml file, depending on OS. We will fix the versions of the following python and other packages throughout the quarter:\n\npython=3.11.6\nnb_conda=2.2.1\nnb_conda_kernels=2.3.1\npandas=2.0.3\nmatplotlib=3.7.2\nscikit-learn=1.3.0\nseaborn=0.12.2\nplotly=5.18.0\nscrapy=2.8.0\ntwisted=22.10.0\nflask=3.0.0\njinja2=3.1.2\njupyter_client=7.4.9\njupyter_core=5.3.0\njupyter_server=1.23.4\njupyterlab=3.6.3\nnotebook=6.5.4\njax=0.4 (not available on Windows)\nkeras==3 (thorugh pip)\n\nDownload PIC16B-24W-&lt;os&gt;.yml file corresponding to your OS and run the following from the Anaconda Prompt from the directory where the file is located:\nconda env create -f PIC16B-24W-&lt;os&gt;.yml\nThis will create a new environment PIC16B-24W, and I will use that environment in the lectures. Full environment for each OS:\n\nWindows\nMac M1/M2\nUbuntu Linux\nGeneric – e.g., Mac with Intel chip (sorry, I no longer own one). You may want to change conda’s environment solver to mamba for faster installation. (Updated 1/10)\n\nNote that an autograder will be in use for this course, set up on Ubuntu Linux.\n\nInstalling additional packages\nWe will mainly be using the PIC16B-24W environment throughout the course – changing package versions unless prompted is discouraged. In the future, if you ever attempt to import a package and encounter an error, you may attempt to install it via the Environments tab on Anaconda Navigator. Click on Channels button and add “conda-forge” channel. Then, search for the package you need on the right-hand side (you may need to update the index).\nCheck the box beside this package, and then click “Apply” to install.\nIn this course, we’ll primarily demonstrate deep learning libraries (e.g., Keras, TensorFlow, and PyTorch) using Google Colab, which has some significant benefits related to speed of computation. However, you can also try to install these packages via the package manager.\nNote: If you want to use command lines to install Python packages in the future, try to follow prompts that look like\nconda activate PIC16B-24W\nconda install --channel=conda-forge &lt;package name&gt;\nrather than the ones that start with pip install. If this sentence didn’t make sense to you, you can ignore it and stick to using Anaconda navigator.\n\n\n\nd. Launch JupyterLab\nNow launch Anaconda Navigator and open the “Home” tab. Launch JupyterLab. Select the environment PIC16B-24W.\n Selecting the PIC16B-24W environment on Anaconda Navigator\nCreate a new Jupyter notebook. Change the kernel to the PIC16B-24W environment that you created in Step 1b.\n Selecting the PIC16B-24W environment from within a Jupyter notebook.\n\n\ne. Verify\nType the two lines below into your blank Jupyter Notebook and run them, adding in your name. If you do not encounter an error, then your setup was successful. Otherwise, contact the instructor or TA for help.\nimport pandas as pd\nprint(\"My name is [your name] and I installed Anaconda\")\n\n\nf. Creating a new environment on Anaconda (optional)\nSometimes, especially for the term project, you may want to use an environment other than what we have set up for the lectures. You can follow the step below to create a “fresh” environment.\n\nOpen Anaconda Navigator.\nNavigate to the Environments tab.\nChoose “Create.”\nCreate a Python 3.11 environment named “PIC16B-project”."
+  },
+  {
+    "objectID": "posts/installation/index.html#github-and-github-desktop",
+    "href": "posts/installation/index.html#github-and-github-desktop",
+    "title": "Software Installation",
+    "section": "2. GitHub and GitHub Desktop",
+    "text": "2. GitHub and GitHub Desktop\nIf you don’t have a GitHub account yet, create one on GitHub. You get a lot of free stuff as a student.\nAlso download GitHub Desktop, a graphical client for working with git. If you do not use GitHub Desktop (or another graphical client), you will need to work with git from the command line.\nConnect your GitHub Desktop app to your GitHub account."
+  },
+  {
+    "objectID": "posts/installation/index.html#pick-your-favorite-text-editor",
+    "href": "posts/installation/index.html#pick-your-favorite-text-editor",
+    "title": "Software Installation",
+    "section": "3. Pick Your Favorite Text Editor",
+    "text": "3. Pick Your Favorite Text Editor\nText editors allow you to make modifications to plaintext files. They are useful for coding, writing, and any other tasks that require the manipulation of plaintext.\nI like to use JupyterLab or Visual Studio Code. For some reason, my VS code had trouble with Quarto, so I’m going to use JupyterLab.\nSublime Text and Atom are also popular. Some people also use Notepad++ but that might not be the best option for beginners. Beyond this course, if you expect to write a significant amount of code in your career then it is worthwhile to find a text editor that you like.\nOnce you’ve installed a text editor that you like, try opening it up and modifying a text file.\nNext, try writing a simple Python file and running it from your editor. To do this, first paste the following into a file called my_script.py:\nprint(\"I can run Python scripts from my text editor!\")\nThen, open a terminal window from your editor. In the terminal, write python3 my_script.py and hit enter. You’ll need to ensure that your terminal is in the same location as the file my_script.py."
+  },
+  {
+    "objectID": "posts/installation/index.html#install-quarto",
+    "href": "posts/installation/index.html#install-quarto",
+    "title": "Software Installation",
+    "section": "4. Install Quarto",
+    "text": "4. Install Quarto\nIn this course, we’ll use Quarto to create a simple, attractive website on which to host our homework and project submissions.\nFollow the instructions here: https://quarto.org/docs/get-started/Links"
+  },
+  {
+    "objectID": "posts/hw1/index.html",
+    "href": "posts/hw1/index.html",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "",
+    "text": "In this blog post, you’ll create several interesting, interactive data graphics using the NOAA climate data that we’ve explored in the first several weeks of lectures."
+  },
+  {
+    "objectID": "posts/hw1/index.html#instructions",
+    "href": "posts/hw1/index.html#instructions",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "Instructions",
+    "text": "Instructions\nYour post should include not only code but also outputs (i.e. tables, figures) and expository writing that explains what you’re doing. Your target audience is a a student who has completed PIC16A but hasn’t taken PIC16B yet (i.e. you before the start of the quarter).\nSee the “Specifications” section at the bottom for a detailed list of specs."
+  },
+  {
+    "objectID": "posts/hw1/index.html#create-a-database",
+    "href": "posts/hw1/index.html#create-a-database",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "1. Create a Database",
+    "text": "1. Create a Database\nFirst, create a database with three tables: temperatures, stations, and countries. Refer back to lecture notes on how to access country names and relate them to temperature readings. Keep these as three separate tables in your database. (ADDED Jan 21): Please refrain from changing column names. For countries, create a table from this CSV file used in the lecture.\nMake sure to close the database connection after you are finished constructing it."
+  },
+  {
+    "objectID": "posts/hw1/index.html#write-a-query-function",
+    "href": "posts/hw1/index.html#write-a-query-function",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "2. Write a Query Function",
+    "text": "2. Write a Query Function\nIn the climate_database.py file, write a function called query_climate_database() which accepts five arguments:\n\ndb_file, the file name for the database\ncountry, a string giving the name of a country for which data should be returned.\nyear_begin and year_end, two integers giving the earliest and latest years for which should be returned.\nmonth, an integer giving the month of the year for which should be returned.\n\nThe return value of query_climate_database() is a Pandas dataframe of temperature readings for the specified country, in the specified date range, in the specified month of the year. This dataframe should have the following columns, in this order:\n\nNAME: The station name.\nLATITUDE: The latitude of the station.\nLONGITUDE: The longitude of the station.\nCountry: The name of the country in which the station is located.\nYear: The year in which the reading was taken.\nMonth: The month in which the reading was taken.\nTemp: The average temperature at the specified station during the specified year and month. (Note: the temperatures in the raw data are already averages by month, so you don’t have to do any aggregation at this stage.)\n\nHint: Inside the function, you would want to put in the given variables (like year_begin) inside the query string (like SELECT ... FROM ... WHERE ...). While you can do this with string concatenation, using the fancy Python f-strings will probably make your life easier. Be careful not to forget quotation marks for the string variables.\nYou should load the query_climate_database() function and show its content in your blog:\nfrom climate_database import query_climate_database\nimport inspect\nprint(inspect.getsource(query_climate_database))\nRun this example and check if you get the correct result:\nquery_climate_database(db_file = \"your_database_file.db\",\n                       country = \"India\", \n                       year_begin = 1980, \n                       year_end = 2020,\n                       month = 1)\n\n\n\n\n\n\n\n\n\nNAME\n\n\nLATITUDE\n\n\nLONGITUDE\n\n\nCountry\n\n\nYear\n\n\nMonth\n\n\nTemp\n\n\n\n\n\n\n0\n\n\nPBO_ANANTAPUR\n\n\n14.583\n\n\n77.633\n\n\nIndia\n\n\n1980\n\n\n1\n\n\n23.48\n\n\n\n\n1\n\n\nPBO_ANANTAPUR\n\n\n14.583\n\n\n77.633\n\n\nIndia\n\n\n1981\n\n\n1\n\n\n24.57\n\n\n\n\n2\n\n\nPBO_ANANTAPUR\n\n\n14.583\n\n\n77.633\n\n\nIndia\n\n\n1982\n\n\n1\n\n\n24.19\n\n\n\n\n3\n\n\nPBO_ANANTAPUR\n\n\n14.583\n\n\n77.633\n\n\nIndia\n\n\n1983\n\n\n1\n\n\n23.51\n\n\n\n\n4\n\n\nPBO_ANANTAPUR\n\n\n14.583\n\n\n77.633\n\n\nIndia\n\n\n1984\n\n\n1\n\n\n24.81\n\n\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n\n\n3147\n\n\nDARJEELING\n\n\n27.050\n\n\n88.270\n\n\nIndia\n\n\n1983\n\n\n1\n\n\n5.10\n\n\n\n\n3148\n\n\nDARJEELING\n\n\n27.050\n\n\n88.270\n\n\nIndia\n\n\n1986\n\n\n1\n\n\n6.90\n\n\n\n\n3149\n\n\nDARJEELING\n\n\n27.050\n\n\n88.270\n\n\nIndia\n\n\n1994\n\n\n1\n\n\n8.10\n\n\n\n\n3150\n\n\nDARJEELING\n\n\n27.050\n\n\n88.270\n\n\nIndia\n\n\n1995\n\n\n1\n\n\n5.60\n\n\n\n\n3151\n\n\nDARJEELING\n\n\n27.050\n\n\n88.270\n\n\nIndia\n\n\n1997\n\n\n1\n\n\n5.70\n\n\n\n\n\n\n3152 rows × 7 columns"
+  },
+  {
+    "objectID": "posts/hw1/index.html#write-a-geographic-scatter-function-for-yearly-temperature-increases",
+    "href": "posts/hw1/index.html#write-a-geographic-scatter-function-for-yearly-temperature-increases",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "3. Write a Geographic Scatter Function for Yearly Temperature Increases",
+    "text": "3. Write a Geographic Scatter Function for Yearly Temperature Increases\nIn this part, you will write a function to create visualizations that address the following question:\n\nHow does the average yearly change in temperature vary within a given country?\n\nWrite a function called temperature_coefficient_plot(). This function should accept six explicit arguments, and an undetermined number of keyword arguments.\n\ndb_file, country, year_begin, year_end, and month should be as in the previous part.\nmin_obs, the minimum required number of years of data for any given station. Only data for stations with at least min_obs years worth of data in the specified month should be plotted; the others should be filtered out. df.transform() plus filtering is a good way to achieve this task.\n**kwargs, additional keyword arguments passed to px.scatter_mapbox(). These can be used to control the colormap used, the mapbox style, etc.\n\nThe output of this function should be an interactive geographic scatterplot, constructed using Plotly Express, with a point for each station, such that the color of the point reflects an estimate of the yearly change in temperature during the specified month and time period at that station. A reasonable way to do this is to compute the first coefficient of a linear regression model at that station, as illustrated in the lecture where we used the .apply() method.\nFor example, after writing your function, you should be able to create a plot of estimated yearly increases in temperature during the month of January, in the interval 1980-2020, in India, as follows:\n# assumes you have imported necessary packages\ncolor_map = px.colors.diverging.RdGy_r # choose a colormap\n\nfig = temperature_coefficient_plot(\"India\", 1980, 2020, 1, \n                                   min_obs = 10,\n                                   zoom = 2,\n                                   mapbox_style=\"carto-positron\",\n                                   color_continuous_scale=color_map)\n\nfig.show()\n\n\nPlease pay attention to the following details:\n\nThe station name is shown when you hover over the corresponding point on the map.\nThe estimates shown in the hover are rounded to a sober number of significant figures.\nThe colorbar and overall plot have professional titles.\nThe colorbar is centered at 0, so that the “middle” of the colorbar (white, in this case) corresponds to a coefficient of 0.\n\nIt’s not necessary for your plot to look exactly like mine, but please attend to details such as these. Feel free to be creative about these labels, as well as the choice of colors, as long as your result is polished overall.\nYou are free (and indeed encouraged) to define additional functions as needed."
+  },
+  {
+    "objectID": "posts/hw1/index.html#create-two-more-interesting-figures",
+    "href": "posts/hw1/index.html#create-two-more-interesting-figures",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "4. Create Two More Interesting Figures",
+    "text": "4. Create Two More Interesting Figures\nCreate at least one more SQL query function in climate_database.py and at least two more complex and interesting interactive data visualizations using the same data set. These plots must be of different types (e.g. line and bar, scatter and histogram, etc). The code to construct each visualization should be wrapped in functions, such that a user could create visualizations for different parts of the data by calling these functions with different arguments. At least one of these plots must involve multiple facets (i.e. multiple axes (in the sense of facets), each of which shows a subset of the data).\nAlongside the plots, you should clearly state a question that the plot addresses, similar to the question that we posed in Part 3. The questions for your two additional plots should be meaningfully different from each other and from the Part 3 question. You will likely want to define different query functions for extracting data for these new visualizations.\nIt is not necessary to create geographic plots for this part. Scatterplots, histograms, and line plots (among other choices) are all appropriate. Please make sure that they are complex, engaging, professional, and targeted to the questions you posed. In other words, push yourself! Don’t hesitate to ask your peers or talk to me if you’re having trouble coming up with questions or identifying plots that might be suitable for addressing those questions."
+  },
+  {
+    "objectID": "posts/hw1/index.html#tip",
+    "href": "posts/hw1/index.html#tip",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "Tip",
+    "text": "Tip\nTo properly show figures in your blog, the most reliable way is to set your plotly renderer to iframe. To do so, run the following near the top of your notebook:\nimport plotly.io as pio\npio.renderers.default=\"iframe\"\nThis will generate a folder called iframe_figures/ inside the folder where your notebook is located. In order to have the figures show up in your blog, you should keep this folder along with the Jupyter Notebook in your post folder."
+  },
+  {
+    "objectID": "posts/hw1/index.html#submission",
+    "href": "posts/hw1/index.html#submission",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "Submission",
+    "text": "Submission\nThere will be three Gradescope assignments open for submission, one for autograder, one for PDF, and the other for files. You have to submit all of them for your homework to be graded.\n\nFor autograder, please submit the file climate_database.py.\nFor the PDF assingment, please submit your newly-created blog page printed as PDF. Please make sure your code is visible in full, i.e., not cuttoff, in your pdf.\n\nThe PDF file should show the URL to your blog.\n\nFor the files assignment, please submit any code file you wrote for your homework. You don’t have to include what you have submitted for autograder. All the .py file, .ipynb file, or .qmd files all included. You don’t have to submit .html or .db files. It should include a .py file converted from any .ipynb file. The grader should be able to reproduce your result from the code portion you submitted.\n\nIt must include index.ipynb, the Jupyter Notebook you worked on, and index.py, a Python script-converted version of it."
+  },
+  {
+    "objectID": "posts/hw1/index.html#format",
+    "href": "posts/hw1/index.html#format",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "Format",
+    "text": "Format\n\nPlease follow the “Submission” section above."
+  },
+  {
+    "objectID": "posts/hw1/index.html#coding-problem",
+    "href": "posts/hw1/index.html#coding-problem",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "Coding Problem",
+    "text": "Coding Problem\n\nThe query_climate_database() function is correctly defined according to the prompt (autograded).\nThe return value for the India example has 3152 rows.\nThere are two geographic scatterplots, one for 1980-2020 India that looks similar to the provided example, and another one for a different time and/or country.\nThe geographic scatterplots are correctly constructed and professionally labeled, including a title, hovers with rounded estimates, and a correctly centered colorbar.\nThere is at least one more sql query function defined.\nThere are two other interactive plots constructed using Plotly.\nOne of these plots involves the use of multiple facets.\nThe two other plots are wrapped in appropriate, user-friendly functions.\nEach of the two other interactive plots have descriptive titles and centered color maps when appropriate."
+  },
+  {
+    "objectID": "posts/hw1/index.html#style-and-documentation",
+    "href": "posts/hw1/index.html#style-and-documentation",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "Style and Documentation",
+    "text": "Style and Documentation\n\nRepeated operations should be enclosed in functions.\nFor-loops are minimized by making full use of vectorized operations for Numpy arrays and Pandas data frames.\nHelpful comments are supplied throughout the code. Docstrings are supplied for any functions and classes you define.\n\nPlease show the content of the functions you defined in a separate python file using inspect.getsource()."
+  },
+  {
+    "objectID": "posts/hw1/index.html#writing",
+    "href": "posts/hw1/index.html#writing",
+    "title": "Homework 1: Data Wrangling and Visualization",
+    "section": "Writing",
+    "text": "Writing\n\nThe overall post is written in engaging and unambiguous English prose. There is written explanation throughout the post, such that a PIC16A student could learn to perform the demonstrated tasks by reading the post.\n\nEach block of code has a clearly-explained purpose.\nThe post is organized into clearly delimited sections using markdown headers (#), making it easier for the reader to navigate.\n\nThe post has a different title from “Blog Post: Data Wrangling and Visualization” or “Blog Post 1”. Please rename it to something more relevant and specific to your data analysis."
+  },
+  {
+    "objectID": "posts/composing/index.html",
+    "href": "posts/composing/index.html",
+    "title": "Creating Posts",
+    "section": "",
+    "text": "How to create technical posts that include Python code, explanatory text, and notes."
+  },
+  {
+    "objectID": "posts/composing/index.html#directory",
+    "href": "posts/composing/index.html#directory",
+    "title": "Creating Posts",
+    "section": "Directory",
+    "text": "Directory\nYour posts should be placed in the posts/ directory of your website.\nIf you want to make a new page called bruin, then create a new folder named bruin/ inside posts/. For example:\nposts\n└───composing \n└───bruin &lt; new folder\n└───quarto\n└───software\n└───welcome"
+  },
+  {
+    "objectID": "posts/composing/index.html#create-the-file",
+    "href": "posts/composing/index.html#create-the-file",
+    "title": "Creating Posts",
+    "section": "Create the File",
+    "text": "Create the File\nYou have two options with the folder bruin/.\nOption 1: Add a Jupyter Notebook named index.ipynb Since your homework posts will be based on previous work you did in a Jupyter notebook or Google colab, this will probably be the easier option for publishing homeworks.\nOption 2: Add a index.qmd text file But this is probably a better option for your group project blog post, and once you (hopefully) continue to build up your portfolio using this website.\nFor either options, make sure to add a header that looks like this to the top:\n---\ntitle: \"Creating posts\"\nauthor: \"Seyoon\"\ndate: \"2023-12-23\"\ncategories: [week 0, example]\n---\nIn Jupyter notebook, this header should be in a raw cell up top."
+  },
+  {
+    "objectID": "posts/composing/index.html#markdown-styling",
+    "href": "posts/composing/index.html#markdown-styling",
+    "title": "Creating Posts",
+    "section": "Markdown Styling",
+    "text": "Markdown Styling\nYou can use Markdown to style basic text, much as you do in Jupyter Notebooks.\nLook into Quarto’s Markdown basics, Figures and Tables. You’re welcome to explore other pages that cover more complex concepts like Diagrams, Videos, and Callout Blocks."
+  },
+  {
+    "objectID": "posts/composing/index.html#math",
+    "href": "posts/composing/index.html#math",
+    "title": "Creating Posts",
+    "section": "Math",
+    "text": "Math\nIf you are familiar with the \\[\\LaTeX\\] typesetting system, you can use many standard commands by enclosing them in double $ symbols. You can make both inline math like \\[\nf(x) = e^x\n\\] and display math like \\[\n\\sum_{i=1}^\\infty \\frac{1}{i^2} = \\frac{\\pi^2}{6}.\n\\]"
+  },
+  {
+    "objectID": "posts/composing/index.html#images",
+    "href": "posts/composing/index.html#images",
+    "title": "Creating Posts",
+    "section": "Images",
+    "text": "Images\nYou can and should include images in your posts, especially in cases where you have created a data visualization. If the image is already available online, you can link to it using the syntax ![alt text](image_url):\n\n(Source: https://xkcd.com/353/)"
+  },
+  {
+    "objectID": "posts/composing/index.html#code",
+    "href": "posts/composing/index.html#code",
+    "title": "Creating Posts",
+    "section": "Code",
+    "text": "Code\nThere are two main ways to insert code in your posts. When talking about a short concept, like the np.random.rand() function, you can type back ticks like this: `np.random.rand()`.\nTo create a larger block of code, use three consecutive backticks ``` to both open and close the code block. If you place the word “{python}” immediately after the opening code blocks, you’ll get attractive syntax highlighting:\n\ndef f(x):\n    \"\"\"\n    A cool function that multiples an input x by 2. \n    \"\"\"\n    return 2*x\n\ny = f(3)\nprint(y)\n\n6\n\n\nNot only that, once you render the page with Quarto, the code output will show up below. If that’s not what you want, use the word “python” instead of “{python}”\nLook at this other cool example from the Quarto tutorial.\nFor a demonstration of a line plot on a polar axis, see Figure 1.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "UCLA PIC 16B Lec 1, Winter 2024",
+    "section": "",
+    "text": "Homework 6: Fake News Classification\n\n\n\n\n\n\n\nHomework\n\n\n\n\n\n\n\n\n\n\n\nFeb 27, 2024\n\n\n\n\n\n\n  \n\n\n\n\nHomework 5: Image Classification\n\n\n\n\n\n\n\nHomework\n\n\n\n\n\n\n\n\n\n\n\nFeb 19, 2024\n\n\n\n\n\n\n  \n\n\n\n\nHomework 4: Heat Diffusion\n\n\n\n\n\n\n\nHomework\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2024\n\n\n\n\n\n\n  \n\n\n\n\nHomework 3: Web Development\n\n\n\n\n\n\n\nHomework\n\n\n\n\n\n\n\n\n\n\n\nJan 29, 2024\n\n\n\n\n\n\n  \n\n\n\n\nHomework 2: Web Scraping\n\n\n\n\n\n\n\nHomework\n\n\n\n\n\n\n\n\n\n\n\nJan 22, 2024\n\n\n\n\n\n\n  \n\n\n\n\nHomework 1: Data Wrangling and Visualization\n\n\n\n\n\n\n\nHomework\n\n\n\n\n\n\n\n\n\n\n\nJan 15, 2024\n\n\n\n\n\n\n  \n\n\n\n\nHomework 0\n\n\n\n\n\n\n\nHomework\n\n\n\n\n\n\n\n\n\n\n\nDec 31, 2023\n\n\n\n\n\n\n  \n\n\n\n\nCreating Posts\n\n\n\n\n\n\n\nWeek 0\n\n\n\n\n\n\n\n\n\n\n\nDec 30, 2023\n\n\n\n\n\n\n  \n\n\n\n\nHello, Quarto\n\n\n\n\n\n\n\nWeek 0\n\n\n\n\n\n\n\n\n\n\n\nDec 29, 2023\n\n\n\n\n\n\n  \n\n\n\n\nSoftware Installation\n\n\n\n\n\n\n\nWeek 0\n\n\n\n\n\n\n\n\n\n\n\nDec 28, 2023\n\n\n\n\n\n\nNo matching items"
+  }
+]
