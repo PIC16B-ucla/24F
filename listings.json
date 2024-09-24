@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/composing/index.html",
       "/posts/installation/index.html",
       "/posts/quarto/index.html",
+      "/posts/composing/index.html",
       "/posts/hw0/index.html"
     ]
   }
