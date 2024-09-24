@@ -169,72 +169,65 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Week 0" data-listing-date-sort="1725174000000" data-listing-file-modified-sort="1727219038583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="0" data-categories="Homework" data-listing-date-sort="1725433200000" data-listing-file-modified-sort="1727219726938" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <div class="thumbnail">
-<p><a href="./posts/installation/index.html"> <img src="./posts/installation/python_environment_2x.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/hw0/index.html"> <img src="./posts/hw0/penguin.jpg" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
-<a href="./posts/installation/index.html">
+<a href="./posts/hw0/index.html">
 <h3 class="no-anchor listing-title">
-Software Installation
+Homework 0
 </h3>
 <div class="listing-subtitle">
 
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Week 0'); return false;">
-Week 0
+<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
+Homework
 </div>
 </div>
-<a href="./posts/installation/index.html">
+<a href="./posts/hw0/index.html">
 <div class="listing-description">
-The purpose of this page is to get you set up with the software tools we’ll use in PIC 16B, including Anaconda, git + GitHub, and Quarto.
+In this blog post assignment, you’ll create a short post for your new website. The primary purpose is to give you some practice working with Quarto blogging with Python code.
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/installation/index.html">
+<a href="./posts/hw0/index.html">
 <div class="listing-date">
-Sep 1, 2024
+Sep 4, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Week 0" data-listing-date-sort="1725260400000" data-listing-file-modified-sort="1727219689912" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./posts/quarto/index.html"> <img src="./posts/quarto/quarto.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/quarto/index.html">
-<h3 class="no-anchor listing-title">
-Hello, Quarto
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Week 0'); return false;">
-Week 0
-</div>
-</div>
-<a href="./posts/quarto/index.html">
-<div class="listing-description">
-In this post, we’ll get set up with Quarto.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/quarto/index.html">
-<div class="listing-date">
-Sep 2, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Week 0" data-listing-date-sort="1725346800000" data-listing-file-modified-sort="1727220017884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="1" data-categories="Week 0" data-listing-date-sort="1725346800000" data-listing-file-modified-sort="1727220017884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="./posts/composing/index.html"> <img src="./posts/composing/index_files/figure-html/cell-3-output-1.png" class="thumbnail-image"> </a></p>
 </div>
@@ -266,34 +259,66 @@ Sep 3, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Homework" data-listing-date-sort="1725433200000" data-listing-file-modified-sort="1727219726938" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="2" data-categories="Week 0" data-listing-date-sort="1725260400000" data-listing-file-modified-sort="1727219689912" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
 <div class="thumbnail">
-<p><a href="./posts/hw0/index.html"> <img src="./posts/hw0/penguin.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/quarto/index.html"> <img src="./posts/quarto/quarto.png" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
-<a href="./posts/hw0/index.html">
+<a href="./posts/quarto/index.html">
 <h3 class="no-anchor listing-title">
-Homework 0
+Hello, Quarto
 </h3>
 <div class="listing-subtitle">
 
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
+<div class="listing-category" onclick="window.quartoListingCategory('Week 0'); return false;">
+Week 0
 </div>
 </div>
-<a href="./posts/hw0/index.html">
+<a href="./posts/quarto/index.html">
 <div class="listing-description">
-In this blog post assignment, you’ll create a short post for your new website. The primary purpose is to give you some practice working with Quarto blogging with Python code.
+In this post, we’ll get set up with Quarto.
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/hw0/index.html">
+<a href="./posts/quarto/index.html">
 <div class="listing-date">
-Sep 4, 2024
+Sep 2, 2024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="Week 0" data-listing-date-sort="1725174000000" data-listing-file-modified-sort="1727219038583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="thumbnail">
+<p><a href="./posts/installation/index.html"> <img src="./posts/installation/python_environment_2x.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/installation/index.html">
+<h3 class="no-anchor listing-title">
+Software Installation
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Week 0'); return false;">
+Week 0
+</div>
+</div>
+<a href="./posts/installation/index.html">
+<div class="listing-description">
+The purpose of this page is to get you set up with the software tools we’ll use in PIC 16B, including Anaconda, git + GitHub, and Quarto.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/installation/index.html">
+<div class="listing-date">
+Sep 1, 2024
 </div>
 </a>
 </div>
