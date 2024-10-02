@@ -102,7 +102,7 @@
     "href": "posts/hw0/index.html#format",
     "title": "Homework 0",
     "section": "Format",
-    "text": "Format\n\nFor the PDF section, you have to submit the PDF-printed version of your Quarto blog. The file should show the URL to your published blog. Anything else will receive “In Progress” grade at best, incuding:\n\n\nJupyter notebook or JupyterLab screen printed\nHTML-converted Jupyter notebook printed\nPDF-converted Jupyter notebook or JupyterLab\nPDF generated directly from Quarto\n\n\nFor the files section, you have to submit code necessary to reproduce your results, including index.ipynb and index.py, as specified above."
+    "text": "Format\n\nFor the PDF section, you have to submit the PDF-printed version of your Quarto preview. Anything else will receive “In Progress” grade at best, incuding:\n\n\nJupyter notebook or JupyterLab screen printed\nHTML-converted Jupyter notebook printed\nPDF-converted Jupyter notebook or JupyterLab\nPDF generated directly using Quarto (through pandoc and latex)\n\n\nFor the files section, you have to submit code necessary to reproduce your results, including index.ipynb and index.py, as specified above."
   },
   {
     "objectID": "posts/hw0/index.html#coding-problem",
